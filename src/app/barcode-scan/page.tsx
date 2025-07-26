@@ -23,7 +23,7 @@ export default function BarcodeScanPage() {
 
 
             >
-              סרוק ברקוד פריט לקבלת מלאי בחנות רנואר
+              סרוק ברקוד פריט לקבלת מלאי בחנות 
             </button>
 
           </div>
