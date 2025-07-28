@@ -13,25 +13,29 @@ const reports = [
 
 export default function SalesReportsPage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] w-full bg-glilot3">
-      {/* Overlay חום */}
-      <div className="absolute inset-0 bg-brown bg-opacity-50"></div>
-      {/* <h1 className="text-2xl font-bold mb-8">דוחות מכירה</h1> */}
-      <div className="flex justify-center mb-8">
+    <div className="relative flex flex-col items-center justify-center min-h-[60vh] w-full bg-glilot3">
+      {/* Overlay לבן חצי שקוף */}
+      <div className="absolute inset-0 bg-white bg-opacity-60 -z-10"></div>
+      
+      {/* כותרת ממורכזת */}
+      <div className="flex justify-center mb-8 z-10">
         <div className="bg-white bg-opacity-80 rounded-xl px-8 py-3 shadow">
           <h1 className="text-6xl font-bold">
-            <span className="text-black">דוחות</span> <span className="text-black">מכירה</span>
+            <span className="text-black">דוחות </span>
+            <span className="text-black">מכירה</span>
           </h1>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-4xl">
+      
+      {/* כפתורים ממורכזים ברוחב וגובה אחיד */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-fit max-w-5xl justify-items-center mx-auto z-10">
         {reports.map((report, idx) => (
           <a
             key={idx}
             href={report.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`font-bold py-4 px-2 rounded-xl shadow transition text-lg flex items-center justify-center text-center ${report.color}`}
+            className={`w-48 h-20 font-bold rounded-xl shadow transition text-lg flex items-center justify-center text-center cursor-pointer ${report.color}`}
             style={{
               border: "1px solid #ddd",
               boxShadow: "0 2px 8px 0 rgba(0,0,0,0.07)",
