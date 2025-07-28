@@ -1,5 +1,6 @@
 'use client';
 
+
 import { useRouter } from 'next/navigation';
 
 export default function BarcodeScanPage() {
@@ -28,5 +29,6 @@ export default function BarcodeScanPage() {
         </p>
       </div>
     </div>
+
   );
 }
