@@ -3,7 +3,7 @@
 import Link from 'next/link';
 
 export default function customerservicePage() {
-  const url = "https://api.whatsapp.com/send/?phone=972524117957&text&type=phone_number&app_absent=0";
+  const url = "https://web.whatsapp.com/send/?phone=972524117957&text&type=phone_number&app_absent=0";
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] w-full bg-glilot6">
