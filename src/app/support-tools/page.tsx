@@ -15,7 +15,7 @@ export default function SupportToolsPage() {
       {/* Overlay לבן חצי שקוף */}
       <div className="absolute inset-0 bg-white bg-opacity-60 -z-10"></div>
       
-      {/* כותרת ממורכזת */}
+      {/* כותרת */}
       <div className="flex justify-center mb-8 z-10">
         <div className="bg-white bg-opacity-80 rounded-xl px-8 py-3 shadow">
           <h1 className="text-6xl font-bold">
@@ -25,8 +25,8 @@ export default function SupportToolsPage() {
         </div>
       </div>
       
-      {/* כפתורים ממורכזים ברוחב וגובה אחיד */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-fit max-w-5xl justify-items-center mx-auto z-10">
+      {/* כפתורים */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-6 w-full max-w-5xl mx-auto z-10">
         {tools.map((tool: { label: string; url: string; color: string }, idx: number) => (
           <a
             key={idx}
@@ -43,6 +43,7 @@ export default function SupportToolsPage() {
           </a>
         ))}
       </div>
+
     </div>
   );
 }
