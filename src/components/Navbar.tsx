@@ -8,6 +8,7 @@ const navItems = [
   { href: '/company-policies'     , label: 'נהלי חברה' },
   { href: '/cash-policies'        , label: 'נהלי קופות' },
   { href: '/sales-reports'        , label: 'דוחות מכירות' },
+  { href: '/support-tools'        , label: 'כלי עזר ותמיכה' },
   { href: '/new-employee-contract', label: 'חוזה לעובד חדש' },
   { href: '/barcode-scan'         , label: 'סריקת ברקוד' },
   { href: '/customer-service'     , label: 'שירות לקוחות' },
