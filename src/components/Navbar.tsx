@@ -7,6 +7,7 @@ import { useState } from 'react';
 const navItems = [
   { href: '/company-policies'     , label: 'נהלי חברה' },
   { href: '/cash-policies'        , label: 'נהלי קופות' },
+  { href: '/midrag'               , label: 'מדרג' },
   { href: '/sales-reports'        , label: 'דוחות מכירות' },
   { href: '/support-tools'        , label: 'כלי עזר ותמיכה' },
   { href: '/new-employee-contract', label: 'חוזה לעובד חדש' },
