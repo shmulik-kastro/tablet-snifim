@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navbar from '@/components/Navbar'
 import { LoginProvider } from './LoginContext'
+import ClientLayout from './ClientLayout'   // ← נוסיף את זה
 
 export const metadata: Metadata = {
   title: 'מערכת החברה',
@@ -29,17 +29,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
           </header>
 
-          {/* סרגל ניווט */}
-          <nav className="w-full bg-white border-b">
-            <div className="max-w-7xl mx-auto px-4">
-              <Navbar />
-            </div>
-          </nav>
-
-          {/* תוכן הדף */}
-          <main className="max-w-7xl mx-auto px-4 py-8">
+          {/* מכאן ואילך – הלוגיקה של Navbar / main עוברת ל-ClientLayout */}
+          <ClientLayout>
             {children}
-          </main>
+          </ClientLayout>
         </LoginProvider>
       </body>
     </html>

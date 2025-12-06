@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from "next/navigation"; // ← הפקודה שצריך
+import { useRouter } from "next/navigation";
+import { useLogin } from './LoginContext';   // ← נוסף
 
 function getDayOfWeekIsrael() {
   const jsDay = new Date().getDay(); // ראשון=0 ... שבת=6
@@ -14,21 +15,25 @@ function getDayOfMonth() {
 
 export default function LoginPage() {
   const router = useRouter();
+  const { login } = useLogin();            // ← מושך את login מהקונטקסט
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [success, setSuccess] = useState(false);
 
-  // החישוב הרלוונטי
   const correctUsername = String(getDayOfWeekIsrael());
   const correctPassword = String(getDayOfMonth());
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+
     if (username === correctUsername && password === correctPassword) {
+      login();                // ← מסמן שהמשתמש מחובר
       setSuccess(true);
+
       setTimeout(() => {
-        router.push('/company-policies'); // ← או לכל דף שתבחר, למשל "/company-policies"
-      }, 1000); // מעביר אחרי שנייה, אפשר גם 0      
+        router.push('/company-policies');  // מעבר לעמוד נהלי חברה
+      }, 500);
     } else {
       alert('שם משתמש או סיסמה לא נכונים');
     }
@@ -61,7 +66,11 @@ export default function LoginPage() {
         >
           התחבר
         </button>
-        {success && <div className="text-green-600 font-bold text-center mt-4">התחברת בהצלחה!</div>}
+        {success && (
+          <div className="text-green-600 font-bold text-center mt-4">
+            התחברת בהצלחה!
+          </div>
+        )}
       </form>
     </div>
   );
