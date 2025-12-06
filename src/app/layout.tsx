@@ -4,7 +4,7 @@ import { LoginProvider } from './LoginContext'
 import ClientLayout from './ClientLayout'   // ← נוסיף את זה
 
 export const metadata: Metadata = {
-  title: 'מערכת החברה',
+  title: 'הסניף שלי',
   description: 'פורטל נהלים ודוחות ארגוני',
 }
 
