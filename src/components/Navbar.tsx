@@ -1,13 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { useLogin } from '@/app/LoginContext';
 
 const navItems = [
   { href: '/company-policies'     , label: 'נהלי חברה' },
   { href: '/cash-policies'        , label: 'נהלי קופות' },
-  { href: '/midrag'               , label: 'מדרג' },
+  //{ href: '/midrag'               , label: 'מדרג' },
   { href: '/sales-reports'        , label: 'דוחות מכירות' },
   { href: '/support-tools'        , label: 'כלי עזר ותמיכה' },
   { href: '/new-employee-contract', label: 'חוזה לעובד חדש' },
@@ -17,7 +18,15 @@ const navItems = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
+  const { logout } = useLogin();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  function handleLogout() {
+    logout();
+    setMenuOpen(false);
+    router.push('/');
+  }
 
   return (
     <nav className="bg-white shadow fixed w-full z-50 top-0 left-0">
@@ -35,6 +44,13 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
+          <button
+            type="button"
+            onClick={handleLogout}
+            className="px-3 py-2 rounded bg-red-50 text-red-700 hover:bg-red-100 transition"
+          >
+            יציאה
+          </button>
         </div>
         {/* Mobile menu button */}
         <button
@@ -63,6 +79,13 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
+            <button
+              type="button"
+              onClick={handleLogout}
+              className="mx-4 mt-2 px-4 py-2 rounded bg-red-50 text-red-700 hover:bg-red-100 transition text-right"
+            >
+              יציאה
+            </button>
           </div>
         </div>
       )}

@@ -48,14 +48,14 @@ export default function LoginPage() {
         <h2 className="text-2xl font-bold text-center mb-4">התחברות</h2>
         <input
           type="text"
-          placeholder="שם משתמש (דידי)"
+          placeholder="שם משתמש (DOW)"
           value={username}
           onChange={e => setUsername(e.target.value)}
           className="p-2 rounded border"
         />
         <input
           type="password"
-          placeholder="סיסמה (אם)"
+          placeholder="סיסמה (DOM)"
           value={password}
           onChange={e => setPassword(e.target.value)}
           className="p-2 rounded border"

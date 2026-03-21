@@ -1,15 +1,32 @@
 'use client';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import { useLogin } from './LoginContext';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function ClientLayout({ children }: { children: ReactNode }) {
-  const { loggedIn } = useLogin();
+  const { loggedIn, authReady } = useLogin();
   const pathname = usePathname();
+  const router = useRouter();
 
   const isLoginPage = pathname === '/';
+  const isProtectedRoute = !isLoginPage;
   const showNavbar = loggedIn && !isLoginPage;
+
+  useEffect(() => {
+    if (!authReady) return;
+    if (!loggedIn && isProtectedRoute) {
+      router.replace('/');
+    }
+  }, [authReady, loggedIn, isProtectedRoute, router]);
+
+  if (!authReady) {
+    return null;
+  }
+
+  if (!loggedIn && isProtectedRoute) {
+    return null;
+  }
 
   return (
     <>

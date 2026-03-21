@@ -4,6 +4,7 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 
 type LoginContextType = {
   loggedIn: boolean;
+  authReady: boolean;
   login: () => void;
   logout: () => void;
 };
@@ -14,6 +15,7 @@ const STORAGE_KEY = 'tablet-snifim-logged-in';
 
 export function LoginProvider({ children }: { children: ReactNode }) {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [authReady, setAuthReady] = useState(false);
 
   // טעינת מצב ההתחברות מהדפדפן כשאפליקציה עולה
   useEffect(() => {
@@ -22,6 +24,7 @@ export function LoginProvider({ children }: { children: ReactNode }) {
     if (stored === 'true') {
       setLoggedIn(true);
     }
+    setAuthReady(true);
   }, []);
 
   const login = () => {
@@ -39,7 +42,7 @@ export function LoginProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <LoginContext.Provider value={{ loggedIn, login, logout }}>
+    <LoginContext.Provider value={{ loggedIn, authReady, login, logout }}>
       {children}
     </LoginContext.Provider>
   );
