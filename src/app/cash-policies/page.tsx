@@ -38,8 +38,8 @@ export default function CashPoliciesPage() {
           <a
             key={idx}
             href={policy.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            //target="_blank"
+            //rel="noopener noreferrer"
             className={`font-bold py-4 px-2 rounded-xl shadow transition text-lg flex items-center justify-center text-center ${policy.color}`}
             style={{
               border: "1px solid #ddd",
