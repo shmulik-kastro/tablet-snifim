@@ -14,6 +14,7 @@ const navItems = [
   { href: '/new-employee-contract', label: 'חוזה לעובד חדש' },
   { href: '/barcode-scan'         , label: 'סריקת ברקוד' },
   { href: '/customer-service'     , label: 'שירות לקוחות' },
+  { href: '/rms-alerts'           , label: 'התראות RMS' },
 ];
 
 export default function Navbar() {

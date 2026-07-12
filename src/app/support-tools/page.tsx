@@ -8,6 +8,7 @@ const tools = [
   { label: 'תמונות עדכון מבצעים בשבוע האחרון', url: 'https://renuar.b-salesbook.com/Report/Index/352', color: 'bg-purple-200 hover:bg-purple-300 text-purple-900' },
   { label: 'חבילות אינטרנט שלא נמסרו מעל 21 יום', url: 'https://renuar.b-salesbook.com/Report/Index/285', color: 'bg-teal-200 hover:bg-teal-300 text-teal-900' },
   { label: 'טופס פניות מחנויות', url: 'https://docs.google.com/forms/d/e/1FAIpQLSdzksf3z44Xwsf1ZRxsKiCJrtjIl76_xQjP1v-enqSRQQ4EdA/viewform?pli=1', color: 'bg-indigo-200 hover:bg-indigo-300 text-indigo-900' },
+  { label: 'סריקת ברקוד', url: 'https://renuar-blox.pb-digital.co.il/%d7%94%d7%93%d7%a8%d7%9b%d7%94/', color: 'bg-orange-200 hover:bg-orange-300 text-orange-900' },
 ];
 
 export default function SupportToolsPage() {
