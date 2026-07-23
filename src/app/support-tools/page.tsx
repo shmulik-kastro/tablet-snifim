@@ -10,6 +10,7 @@ const tools = [
   { label: 'טופס פניות מחנויות', url: 'https://docs.google.com/forms/d/e/1FAIpQLSdzksf3z44Xwsf1ZRxsKiCJrtjIl76_xQjP1v-enqSRQQ4EdA/viewform?pli=1', color: 'bg-indigo-200 hover:bg-indigo-300 text-indigo-900' },
   { label: 'סריקת ברקוד', url: 'https://renuar-blox.pb-digital.co.il/%d7%94%d7%93%d7%a8%d7%9b%d7%94/', color: 'bg-orange-200 hover:bg-orange-300 text-orange-900' },
   { label: 'תעודות משלוח לאישור קבלה', url: 'https://renuar.b-salesbook.com/Report/Index/420', color: 'bg-rose-200 hover:bg-rose-300 text-rose-900' },
+  { label: 'ת.משלוח חתומות', url: 'https://renuar.b-salesbook.com/Report/Index/432', color: 'bg-sky-200 hover:bg-sky-300 text-sky-900' },
 ];
 
 export default function SupportToolsPage() {
@@ -28,8 +29,8 @@ export default function SupportToolsPage() {
         </div>
       </div>
       
-      {/* כפתורים */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-6 w-full max-w-5xl mx-auto z-10">
+      {/* כפתורים — 4 בשורה */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-6 w-fit max-w-5xl justify-items-center mx-auto z-10">
         {tools.map((tool: { label: string; url: string; color: string }, idx: number) => (
           <a
             key={idx}
