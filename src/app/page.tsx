@@ -21,14 +21,14 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [success, setSuccess] = useState(false);
 
-  const correctUsername = String(getDayOfWeekIsrael());
-  const correctPassword = String(getDayOfMonth());
+  const correctPassword = `${getDayOfWeekIsrael()}-${getDayOfMonth()}`;
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    if (username === correctUsername && password === correctPassword) {
-      login();                // ← מסמן שהמשתמש מחובר
+    const snifCode = username.trim();
+    if (snifCode && password === correctPassword) {
+      login(snifCode);        // ← מסמן שהמשתמש מחובר ושומר קוד סניף
       setSuccess(true);
 
       setTimeout(() => {
@@ -48,14 +48,14 @@ export default function LoginPage() {
         <h2 className="text-2xl font-bold text-center mb-4">התחברות</h2>
         <input
           type="text"
-          placeholder="שם משתמש (DOW)"
+          placeholder="שם משתמש (SNIF)"
           value={username}
           onChange={e => setUsername(e.target.value)}
           className="p-2 rounded border"
         />
         <input
           type="password"
-          placeholder="סיסמה (DOM)"
+          placeholder="סיסמה (DOW-DOM)"
           value={password}
           onChange={e => setPassword(e.target.value)}
           className="p-2 rounded border"
