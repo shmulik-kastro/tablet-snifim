@@ -30,7 +30,7 @@ export default function RmsAlertsPage() {
           <button
             type="button"
             onClick={() => setShowIframe(false)}
-            className="self-start mb-3 text-lg font-semibold text-blue-800 hover:underline"
+            className="self-start mb-3 text-2xl font-semibold text-white hover:underline"
           >
             ← חזרה
           </button>
