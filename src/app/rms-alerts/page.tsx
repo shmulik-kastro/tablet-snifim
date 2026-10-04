@@ -37,6 +37,7 @@ export default function RmsAlertsPage() {
           <iframe
             src={RMS_OVERVIEW_URL}
             title="מערכת התראות RMS"
+            allow="autoplay; fullscreen"
             className="w-full min-h-[75vh] rounded-lg border border-gray-300 bg-white shadow"
           />
         </div>
