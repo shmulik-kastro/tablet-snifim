@@ -1,9 +1,10 @@
 'use client';
 
 const tools = [
-  { label: 'איתור נייד לפי עסקה', url: 'https://renuar.b-salesbook.com/Report/Index/343', color: 'bg-pink-200 hover:bg-pink-300 text-pink-900' },
+  //{ label: 'איתור נייד לפי עסקה', url: 'https://renuar.b-salesbook.com/Report/Index/343', color: 'bg-pink-200 hover:bg-pink-300 text-pink-900' },
+  { label: 'איתור נייד לפי עסקה', url: 'https://renuar-blox.pb-digital.co.il/weezmo_phone/', color: 'bg-pink-200 hover:bg-pink-300 text-pink-900' },
   { label: 'איתור עסקה לפי נייד', url: 'https://renuar.b-salesbook.com/Report/Index/339', color: 'bg-blue-200 hover:bg-blue-300 text-blue-900' },
-  { label: 'פריטים מטרידים בשער', url: 'https://renuar.b-salesbook.com/Report/Index/396', color: 'bg-green-200 hover:bg-green-300 text-green-900' },
+  //{ label: 'פריטים מטרידים בשער', url: 'https://renuar.b-salesbook.com/Report/Index/396', color: 'bg-green-200 hover:bg-green-300 text-green-900' },
   { label: 'מדרג טלפונים פיקטיביים', url: 'https://renuar.b-salesbook.com/Report/Index/315', color: 'bg-yellow-200 hover:bg-yellow-300 text-yellow-900' },
   { label: 'תמונות עדכון מבצעים בשבוע האחרון', url: 'https://renuar.b-salesbook.com/Report/Index/352', color: 'bg-purple-200 hover:bg-purple-300 text-purple-900' },
   { label: 'חבילות אינטרנט שלא נמסרו מעל 21 יום', url: 'https://renuar.b-salesbook.com/Report/Index/285', color: 'bg-teal-200 hover:bg-teal-300 text-teal-900' },
