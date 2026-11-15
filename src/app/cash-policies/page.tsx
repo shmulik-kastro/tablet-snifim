@@ -13,7 +13,7 @@ const policies = [
   { label: 'נוהל סטייליסטים', url: 'https://renuar.b-salesbook.com/ImageView/RenderLocalImage?imageUrl=%2FInfoCenter%2F638003194807401363.pdf', color: 'bg-sky-200 hover:bg-sky-300 text-sky-900' },
   { label: 'חישוב עמלות למוכרנים', url: 'https://renuar.b-salesbook.com/ImageView/RenderLocalImage?imageUrl=%2FInfoCenter%2F638106821379975010.pdf', color: 'bg-fuchsia-200 hover:bg-fuchsia-300 text-fuchsia-900' },
   { label: 'פתיחת תעודות חוסר/עודף לאריזות שלמות', url: 'https://renuar.b-salesbook.com/ImageView/RenderLocalImage?imageUrl=%2FInfoCenter%2F638548418456129505.pdf', color: 'bg-purple-200 hover:bg-purple-300 text-purple-900' },
-
+  { label: 'תשלום באמצעות שיק', url: 'https://renuar.b-salesbook.com/ImageView/RenderLocalImage?imageUrl=%2FInfoCenter%2F639297406908589277.pdf', color: 'bg-amber-200 hover:bg-amber-300 text-amber-900' },
 ];
 
 export default function CashPoliciesPage() {
